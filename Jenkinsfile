@@ -30,6 +30,7 @@ pipeline {
            post{
                always{
                    println "Verify ok!"
+                   archive "build/test-results/verify/*.xml"
                }
            }
         }
