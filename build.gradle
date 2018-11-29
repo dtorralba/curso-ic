@@ -51,7 +51,7 @@ task verify(type: Test) {
 	classpath = sourceSets.acceptanceTest.runtimeClasspath
 
 	dependsOn 'test'
-	verify.mustRunAfter 'test'
+	//verify.mustRunAfter 'test'
 }
 
 def appVersion =  System.properties['appVersion']?:'0.0.1-SNAPSHOT'
@@ -94,7 +94,6 @@ dependencies {
 }
 
 // ===== Docker
-
 import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
 import com.bmuschko.gradle.docker.tasks.image.DockerPushImage
 import com.bmuschko.gradle.docker.tasks.image.Dockerfile
