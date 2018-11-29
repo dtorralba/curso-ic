@@ -1,17 +1,15 @@
 package ar.com.grupoesfera.demo.aceptacion;
 
+import com.grupoesfera.demo.integration.domain.Client;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.apache.http.HttpStatus;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
-
-import org.apache.http.HttpStatus;
-
-import com.grupoesfera.demo.integration.domain.Client;
 
 public class DefinicionDeSteps {
 	
