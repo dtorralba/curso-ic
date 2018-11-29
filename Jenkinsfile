@@ -6,30 +6,30 @@ pipeline {
     stages {
         stage('Build') {
          steps {
-             println 'aca va el build'
-
+             println 'Se empieza a ejecutar el build'
+             sh "build.sh"
          }
          post{
             always{
-
-                println "ava se exportan los resultados de los test unitarios"
+                println "Build ok! "
             }
          }
 
         }
         stage('Deploy') {
           steps {
-              println 'aca va el deploy'
+              println 'Se empieza a ejecutar el deploy'
+              sh "deploy.sh"
           }
         }
         stage('Verify') {
            steps {
-               println 'aca va el verify'
+               println 'Se empieza a ejecutar el verify'
+               sh "verify.sh"
            }
            post{
                always{
-
-                   println "ava se exportan los resultados de los test de aceptación"
+                   println "Verify ok!"
                }
            }
         }
