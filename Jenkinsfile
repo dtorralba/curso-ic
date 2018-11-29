@@ -30,7 +30,7 @@ pipeline {
            post{
                always{
                    println "Verify ok!"
-                   archive "build/test-results/verify/*.xml"
+                   archiveArtifacts "build/test-results/verify/*.xml"
                }
            }
         }
