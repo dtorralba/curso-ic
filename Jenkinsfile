@@ -11,7 +11,7 @@ pipeline {
          }
          post{
             always{
-                println "Build ok! "
+                 junit 'build/test-results/test/*.xml'
             }
          }
 
@@ -30,7 +30,7 @@ pipeline {
            post{
                always{
                    println "Verify ok!"
-                   archiveArtifacts "build/test-results/verify/*.xml"
+                   junit 'build/test-results/verify/*.xml'
                }
            }
         }
